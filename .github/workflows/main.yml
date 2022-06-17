@@ -25,9 +25,9 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
       - run: docker login --username=${{ secrets.USERNAME }} registry.cn-hangzhou.aliyuncs.com --password=${{ secrets.PASSWORD }}
-      - run: docker pull  k8s.gcr.io/pause:3.1
-      - run: docker tag k8s.gcr.io/pause:3.1 registry.cn-hangzhou.aliyuncs.com/sunmd/pause:3.1 
-      - run: docker push registry.cn-hangzhou.aliyuncs.com/sunmd/pause:3.1 
+      - run: docker pull  k8s.gcr.io/metrics-server/metrics-server:v0.5.2
+      - run: docker tag k8s.gcr.io/metrics-server/metrics-server:v0.5.2 registry.cn-hangzhou.aliyuncs.com/sunmd/metrics-server:v0.5.2
+      - run: docker push registry.cn-hangzhou.aliyuncs.com/sunmd/metrics-server:v0.5.2
 
       
 
